@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Hero } from "@/components/Hero";
 import { CharacterCard } from "@/components/CharacterCard";
 import { ImageModal } from "@/components/ImageModal";
+import { KatanaSlash } from "@/components/KatanaSlash";
 import { Github, Twitter, Instagram, Youtube } from "lucide-react";
 
 // Character Images
@@ -60,14 +61,24 @@ const Index = () => {
       {/* Hero Section */}
       <Hero />
 
+      {/* Katana Slash Transition */}
+      <KatanaSlash />
+
       {/* Character Showcase Section */}
-      <section className="py-24 px-4 bg-demon-gradient">
-        <div className="container mx-auto">
+      <section className="py-24 px-4 bg-demon-gradient relative">
+        {/* Decorative Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, currentColor 35px, currentColor 36px)`
+          }} />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="font-['Cinzel'] text-5xl md:text-6xl font-black text-foreground mb-4">
+            <h2 className="font-cinzel text-5xl md:text-6xl font-black text-foreground mb-4 drop-shadow-[0_0_20px_rgba(239,68,68,0.3)]">
               Meet The Heroes
             </h2>
-            <p className="text-muted-foreground text-lg font-['Montserrat'] max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-lg font-montserrat max-w-2xl mx-auto">
               Brave warriors who stand between humanity and the demon menace
             </p>
           </div>
@@ -84,6 +95,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Katana Slash Transition */}
+      <KatanaSlash />
+
       {/* About Section */}
       <section className="py-24 px-4 relative overflow-hidden">
         {/* Japanese Pattern Background */}
@@ -96,11 +110,14 @@ const Index = () => {
 
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="font-['Cinzel'] text-5xl md:text-6xl font-black text-foreground">
+            <h2 className="font-cinzel text-5xl md:text-6xl font-black text-foreground drop-shadow-[0_0_20px_rgba(239,68,68,0.3)]">
               The Epic Saga
             </h2>
+            <div className="font-noto-jp text-2xl text-accent mb-4">
+              鬼滅の刃の世界
+            </div>
             
-            <div className="space-y-6 text-lg font-['Montserrat']">
+            <div className="space-y-6 text-lg font-montserrat">
               <p className="text-muted-foreground leading-relaxed">
                 In a world where demons lurk in the shadows, preying on humanity under the cover of night, 
                 an elite corps of warriors stands as the last line of defense. These are the Demon Slayers, 
@@ -115,17 +132,20 @@ const Index = () => {
               </p>
 
               <div className="pt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="p-6 rounded-lg bg-card border border-border">
-                  <div className="text-4xl font-bold text-primary mb-2">12</div>
-                  <div className="text-sm text-muted-foreground">Breathing Styles</div>
+                <div className="p-6 rounded-lg backdrop-blur-sm bg-card/40 border border-glass-border group hover:border-primary transition-all duration-300"
+                  style={{ background: 'var(--glass-bg)', backdropFilter: 'blur(12px)' }}>
+                  <div className="text-4xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform">12</div>
+                  <div className="text-sm text-muted-foreground font-bebas tracking-wider">Breathing Styles</div>
                 </div>
-                <div className="p-6 rounded-lg bg-card border border-border">
-                  <div className="text-4xl font-bold text-accent mb-2">9</div>
-                  <div className="text-sm text-muted-foreground">Hashira Pillars</div>
+                <div className="p-6 rounded-lg backdrop-blur-sm bg-card/40 border border-glass-border group hover:border-accent transition-all duration-300"
+                  style={{ background: 'var(--glass-bg)', backdropFilter: 'blur(12px)' }}>
+                  <div className="text-4xl font-bold text-accent mb-2 group-hover:scale-110 transition-transform">9</div>
+                  <div className="text-sm text-muted-foreground font-bebas tracking-wider">Hashira Pillars</div>
                 </div>
-                <div className="p-6 rounded-lg bg-card border border-border">
-                  <div className="text-4xl font-bold text-secondary mb-2">∞</div>
-                  <div className="text-sm text-muted-foreground">Epic Battles</div>
+                <div className="p-6 rounded-lg backdrop-blur-sm bg-card/40 border border-glass-border group hover:border-secondary transition-all duration-300"
+                  style={{ background: 'var(--glass-bg)', backdropFilter: 'blur(12px)' }}>
+                  <div className="text-4xl font-bold text-secondary mb-2 group-hover:scale-110 transition-transform">∞</div>
+                  <div className="text-sm text-muted-foreground font-bebas tracking-wider">Epic Battles</div>
                 </div>
               </div>
             </div>
@@ -133,14 +153,20 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Katana Slash Transition */}
+      <KatanaSlash />
+
       {/* Gallery Section */}
       <section className="py-24 px-4 bg-demon-gradient">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-['Cinzel'] text-5xl md:text-6xl font-black text-foreground mb-4">
+            <h2 className="font-cinzel text-5xl md:text-6xl font-black text-foreground mb-4 drop-shadow-[0_0_20px_rgba(239,68,68,0.3)]">
               Gallery
             </h2>
-            <p className="text-muted-foreground text-lg font-['Montserrat']">
+            <div className="font-noto-jp text-xl text-accent mb-2">
+              ギャラリー
+            </div>
+            <p className="text-muted-foreground text-lg font-montserrat">
               Witness the breathtaking world of demon slayers
             </p>
           </div>
@@ -149,8 +175,11 @@ const Index = () => {
             {galleryImages.map((image, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-lg cursor-pointer aspect-video animate-scale-in opacity-0"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group relative overflow-hidden rounded-lg cursor-pointer aspect-video animate-scale-in opacity-0 border-2 border-transparent hover:border-accent transition-all duration-500"
+                style={{ 
+                  animationDelay: `${index * 0.1}s`,
+                  clipPath: index % 2 === 0 ? 'polygon(0 0, 100% 0, 97% 100%, 0 100%)' : 'polygon(3% 0, 100% 0, 100% 100%, 0 100%)'
+                }}
                 onClick={() => openModal(image.src, image.alt)}
               >
                 <img
@@ -158,12 +187,22 @@ const Index = () => {
                   alt={image.alt}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
+                {/* Overlay Gradient */}
                 <div className="absolute inset-0 bg-hero-gradient opacity-0 group-hover:opacity-40 transition-opacity duration-500" />
+                
+                {/* Glassmorphism Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="bg-card/80 backdrop-blur-sm px-6 py-3 rounded-full">
-                    <span className="text-foreground font-['Montserrat'] font-semibold">View Full Size</span>
+                  <div className="backdrop-blur-md bg-card/60 px-6 py-3 rounded-full border border-glass-border">
+                    <span className="text-foreground font-montserrat font-semibold">View Full Size</span>
                   </div>
                 </div>
+
+                {/* Corner Accent */}
+                <div className="absolute top-0 right-0 w-16 h-16 bg-accent/30 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{
+                    clipPath: 'polygon(0 0, 100% 0, 100% 100%)'
+                  }}
+                />
               </div>
             ))}
           </div>
@@ -216,11 +255,11 @@ const Index = () => {
 
             {/* Copyright */}
             <div className="text-center md:text-right">
-              <p className="text-muted-foreground text-sm font-['Montserrat']">
+              <p className="text-muted-foreground text-sm font-montserrat">
                 © 2025 Demon Slayer Production Committee. All rights reserved.
               </p>
-              <p className="text-muted-foreground text-xs mt-1">
-                Created for showcase purposes
+              <p className="text-muted-foreground text-xs mt-1 font-noto-jp">
+                Created for showcase purposes | 鬼滅の刃
               </p>
             </div>
           </div>

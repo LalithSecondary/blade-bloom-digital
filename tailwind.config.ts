@@ -48,11 +48,21 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      fontFamily: {
+        'cinzel': ['Cinzel', 'serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
+        'noto-jp': ['Noto Serif JP', 'serif'],
+        'bebas': ['Bebas Neue', 'cursive'],
+      },
       backgroundImage: {
         'hero-gradient': 'var(--hero-gradient)',
         'demon-gradient': 'var(--demon-gradient)',
         'water-gradient': 'var(--water-gradient)',
         'fire-gradient': 'var(--fire-gradient)',
+      },
+      clipPath: {
+        'slash': 'polygon(0 0, 100% 0, 85% 100%, 0 100%)',
+        'slash-reverse': 'polygon(15% 0, 100% 0, 100% 100%, 0 100%)',
       },
       boxShadow: {
         'glow-red': 'var(--glow-red)',
@@ -99,6 +109,21 @@ export default {
         "float": {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" }
+        },
+        "slash-in": {
+          "0%": { clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" },
+          "100%": { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }
+        },
+        "slide-slash": {
+          "0%": { transform: "translateX(-100%) rotate(-10deg)", opacity: "0" },
+          "50%": { opacity: "1" },
+          "100%": { transform: "translateX(100%) rotate(-10deg)", opacity: "0" }
+        },
+        "particle-float": {
+          "0%": { transform: "translateY(0) translateX(0) rotate(0deg)", opacity: "0" },
+          "10%": { opacity: "1" },
+          "90%": { opacity: "1" },
+          "100%": { transform: "translateY(-100vh) translateX(50px) rotate(360deg)", opacity: "0" }
         }
       },
       animation: {
@@ -109,7 +134,10 @@ export default {
         "fade-in-right": "fade-in-right 0.8s ease-out forwards",
         "scale-in": "scale-in 0.6s ease-out forwards",
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
-        "float": "float 3s ease-in-out infinite"
+        "float": "float 3s ease-in-out infinite",
+        "slash-in": "slash-in 1s ease-out forwards",
+        "slide-slash": "slide-slash 2s ease-in-out",
+        "particle-float": "particle-float 8s linear infinite"
       },
     },
   },
