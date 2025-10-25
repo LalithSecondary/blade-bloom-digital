@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="kyojuroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ea580c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c2d12;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="kyojuroGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#fb923c;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#kyojuroBg)"/>
+  <circle cx="400" cy="400" r="350" fill="url(#kyojuroGlow)"/>
+  <g transform="translate(400, 280)">
+    <circle cx="0" cy="0" r="140" fill="#c2410c" opacity="0.5"/>
+    <text x="0" y="15" text-anchor="middle" font-family="'Cinzel', serif" font-size="72" font-weight="bold" fill="#fdba74" letter-spacing="2">炎</text>
+  </g>
+  <text x="400" y="520" text-anchor="middle" font-family="'Cinzel', serif" font-size="38" font-weight="bold" fill="#ffffff" letter-spacing="1">KYOJURO RENGOKU</text>
+  <text x="400" y="570" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="24" fill="#94a3b8">Flame Hashira</text>
+  <line x1="220" y1="600" x2="580" y2="600" stroke="#fb923c" stroke-width="2" opacity="0.6"/>
+</svg>

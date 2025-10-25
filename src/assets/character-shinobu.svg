@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="shinobuBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="shinobuGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#c084fc;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#shinobuBg)"/>
+  <circle cx="400" cy="400" r="350" fill="url(#shinobuGlow)"/>
+  <g transform="translate(400, 280)">
+    <circle cx="0" cy="0" r="140" fill="#7c3aed" opacity="0.4"/>
+    <text x="0" y="15" text-anchor="middle" font-family="'Cinzel', serif" font-size="72" font-weight="bold" fill="#c084fc" letter-spacing="2">蟲</text>
+  </g>
+  <text x="400" y="520" text-anchor="middle" font-family="'Cinzel', serif" font-size="42" font-weight="bold" fill="#ffffff" letter-spacing="1">SHINOBU KOCHO</text>
+  <text x="400" y="570" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="24" fill="#94a3b8">Insect Hashira</text>
+  <line x1="240" y1="600" x2="560" y2="600" stroke="#a78bfa" stroke-width="2" opacity="0.6"/>
+</svg>
